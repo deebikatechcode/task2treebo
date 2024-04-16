@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.border {
+    width: 100%;
+    /* Adjust the width of the container as needed */
+    margin: 10px;
+    /* Center the container */
+    border: 30px solid sandybrown;
+    /* Black border */
+    background-color: #fff;
+    /* White page */
+    padding: 20px;
+    /* Add some padding inside */
+    box-sizing: border-box;
+    height: 300%;
+    overflow: hidden;
+}
+
+
+.nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+.nav-logo {
+    flex: 1;
+}
+
+.nav-center {
+    flex: 2;
+    text-align: center;
+}
+
+.nav-button {
+    flex: 1;
+    text-align: right;
+}
+
+
+.nav-center ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-center ul li {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+    /* Make the list item position relative */
+}
+
+.nav-center ul li:not(:last-child)::after {
+    content: "\00B7";
+    /* Unicode for middle dot */
+    position: absolute;
+    right: -10px;
+    /* Adjust the spacing of the dot */
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    /* Adjust the color of the dot */
+}
+
+
+.nav-button button {
+    margin-left: 10px;
+}
+
+.nav-button button:nth-child(1) {
+
+
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nav-button button:nth-child(2) {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    .nav-center {
+        display: none;
+        /* Hide the navigation links */
+    }
+
+    .nav-button {
+        flex: 1;
+        text-align: right;
+        display: flex;
+        /* Add flex display */
+        justify-content: flex-end;
+        /* Align items to the end */
+        
+    }
+    .nav-button button {
+        width: max-content;
+        font-size: 10px; /* Reduce font size for smaller screens */
+    }
+
+   
+       
+       
+
+}
+
+/*container body*/
+
+.container-body {
+    background-image: url("images/bodyimg2.jpeg");
+    width: 100%;
+    height: 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    border-radius: 20px;
+    overflow: hidden;
+
+
+
+}
+
+.text-body {
+    margin: 10px;
+    padding: 45px;
+}
+
+.text-body p {
+    margin: 10px;
+    font-size: 20px;
+    color: cadetblue;
+
+}
+
+.text-body span {
+
+
+    font-size: 70px;
+    color: crimson;
+    font-weight: bolder;
+}
+
+.text-body {
+    display: block;
+    
+    /* Adjust the gap between text-body and symbol */
+}
+
+.symbol {
+
+    padding: 80px;
+   
+}
+
+@media screen and (max-width: 600px) {
+    .container-body {
+        width: 100%;
+        height: 80%;
+        position: relative;
+    }
+
+    .text-body {
+        padding: 10px;
+    }
+
+    .text-body span {
+        font-size: 20px;
+    }
+
+    .text-body p {
+        font-size: 5px;
+    }
+
+    .symbol {
+        padding: 15px;
+    }
+
+}
+
+/*overlap container*/
+.overlap-container {
+
+
+
+    /* Adjust to center horizontally */
+    width: 100%;
+    height: 40%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    background-color: white;
+
+
+    border: black;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.overlap-container>div {
+    flex: 1;
+    padding: 5px;
+    position: relative;
+}
+
+.overlap-container>div:not(:last-child) {
+    border-right: 1px solid #ccc;
+}
+
+.overlap-container .fa-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.search-button {
+
+    border-radius: 10%;
+    padding: 8px;
+    /* Adjust padding as needed */
+    width: 4px;
+    /* Adjust padding as needed */
+    display: inline-block;
+    /* Ensure it takes up only the required space */
+}
+
+.search-button i {
+    color: black;
+    float: right;
+    /* Set the color of the icon */
+}
+
+@media screen and (max-width: 600px) {
+    .container-body {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+    }
+
+    .overlap-container {
+        flex-direction: row;
+        width: 100%;
+        /* Stack items horizontally on smaller screens */
+
+        height: 20%;
+        
+
+    }
+
+    .overlap-container a {
+        display: none;
+
+    }
+
+    .overlap-container p {
+        font-size: 8px;
+    }
+
+    .overlap-container>* {
+        margin-bottom: 0;
+        /* Remove bottom margin on smaller screens */
+        margin-right: 15px;
+        /* Add right margin for spacing */
+    }
+
+    .overlap-container>*:last-child {
+        margin-right: 0;
+        /* Remove right margin from the last item */
+    }
+}
+
+
+
+
+
+/*card container*/
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute items evenly along the main axis */
+    align-items: center;
+    margin-top: 60px;
+    overflow: hidden;
+    /* Center items vertically */
+}
+
+.card-text span {
+    font-size: 30px;
+    font-weight: 600;
+    /* Adjust as needed */
+}
+
+
+@media screen and (max-width: 600px) {
+    .card-container {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+    }
+    .card-text span{
+        font-size: 20px;
+
+    }
+
+    .card-logo {
+        margin-top: 10px;
+        /* Add some spacing between text and logos */
+    }
+}
+
+/*grid container*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three columns */
+    gap: 20px;
+    /* Gap between grid items */
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.grid-item {
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    text-align: center;
+   
+}
+
+.seconds {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        /* Switch to single column layout */
+    }
+
+    .grid-item {
+        margin-bottom: 20px;
+        /* Add spacing between grid items */
+    }
+
+    .grid-container img {
+        width: 100%;
+    }
+}
